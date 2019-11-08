@@ -1,15 +1,39 @@
 {
-  "name": "pm-dragndrop",
-  "version": "0.0.0",
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
+  "name": "@pix3lmag/dragndrop",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p package.json"
   },
-  "private": true,
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "whitelistedNonPeerDependencies": [
+      "@angular/animations",
+      "@angular/cdk",
+      "@angular/common",
+      "@angular/compiler",
+      "@angular/forms",
+      "@angular/core",
+      "@angular/http",
+      "@angular/material",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/router",
+      "core-js",
+      "rxjs",
+      "tsickle",
+      "zone.js"
+    ]
+  },
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.8",
     "@angular/common": "~8.2.8",
@@ -24,6 +48,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
+    "ng-packagr": "^5.7.1",
     "@angular-devkit/build-angular": "~0.803.6",
     "@angular/cli": "~8.3.6",
     "@angular/compiler-cli": "~8.2.8",

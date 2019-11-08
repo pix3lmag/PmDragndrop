@@ -1,0 +1,7 @@
+<div id="container">
+  <div *ngFor="let item of (data | pmSortable)" class="column" pmDraggable [draggableId]="item.id" (pmDrop)="onDrop($event)">
+    Id: {{item.id}}<br />
+    Name: {{item.name}}<br/>
+    Sort: {{item.sortNumber}}
+  </div>
+</div>
